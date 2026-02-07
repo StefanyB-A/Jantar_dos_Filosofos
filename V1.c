@@ -6,7 +6,7 @@
 pthread_mutex_t *forks;
 int N; // Numero de filósofos/garfos
 
-void *philosopher(void *arg, int N) {
+void *philosopher(void *arg) {
     int id = *(int*)arg; // Pega o ID do filósofo
     int left = id;
     int right = (id + 1) % N; // Lógica circular para o garfo da direita
